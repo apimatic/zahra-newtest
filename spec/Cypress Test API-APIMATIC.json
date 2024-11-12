@@ -6,7 +6,7 @@
   "ImageUri": "",
   "Description": "This is a ssssdsaxxmpless API to demonstrate an OpenAPI spec with multiple endpoints and a custom model.",
   "Version": "1.0.0",
-  "Contact": {},
+  "Contact": {}
   "AdditionalHeaders": [],
   "Authentication": {
     "Type": "None",
