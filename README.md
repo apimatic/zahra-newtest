@@ -7,66 +7,51 @@ Simple calculator API hosted on APIMATIC
 
 ## Install the Package
 
-Run the following command to install the package and automatically add the dependency to your composer.json file:
+If you are building with .NET CLI tools then you can also use the following command:
 
-```php
-composer require "zee/zahra-testing-123-sdk:2.0.2"
-```
-
-Or add it to the composer.json file manually as given below:
-
-```php
-"require": {
-    "zee/zahra-testing-123-sdk": "2.0.2"
-}
+```bash
+dotnet add package Packageee213SDK --version 1.2.3
 ```
 
 You can also view the package at:
-https://packagist.org/packages/zee/zahra-testing-123-sdk#2.0.2
+https://www.nuget.org/packages/Packageee213SDK/1.2.3
 
 ## Test the SDK
 
-Unit tests in this SDK can be run using PHPUnit.
-
-1. First install the dependencies using composer including the `require-dev` dependencies.
-2. Run `vendor\bin\phpunit --verbose` from commandline to execute tests. If you have installed PHPUnit globally, run tests using `phpunit --verbose` instead.
-
-You can change the PHPUnit test configuration in the `phpunit.xml` file.
+The generated SDK also contain one or more Tests, which are contained in the Tests project. In order to invoke these test cases, you will need `NUnit 3.0 Test Adapter Extension` for Visual Studio. Once the SDK is complied, the test cases should appear in the Test Explorer window. Here, you can click `Run All` to execute these test cases.
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/apimatic/zahra-newtest/tree/2.0.2/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `environment` | `Environment` | The API environment. <br> **Default: `Environment.PRODUCTION`** |
-| `timeout` | `int` | Timeout for API calls in seconds.<br>*Default*: `0` |
-| `enableRetries` | `bool` | Whether to enable retries and backoff feature.<br>*Default*: `false` |
-| `numberOfRetries` | `int` | The number of retries to make.<br>*Default*: `0` |
-| `retryInterval` | `float` | The retry time interval between the endpoint calls.<br>*Default*: `1` |
-| `backOffFactor` | `float` | Exponential backoff factor to increase interval between retries.<br>*Default*: `2` |
-| `maximumRetryWaitTime` | `int` | The maximum wait time in seconds for overall retrying requests.<br>*Default*: `0` |
-| `retryOnTimeout` | `bool` | Whether to retry on request timeout.<br>*Default*: `true` |
-| `httpStatusCodesToRetry` | `array` | Http status codes to retry against.<br>*Default*: `408, 413, 429, 500, 502, 503, 504, 521, 522, 524` |
-| `httpMethodsToRetry` | `array` | Http methods to retry against.<br>*Default*: `'GET', 'PUT'` |
+| `Environment` | `Environment` | The API environment. <br> **Default: `Environment.Production`** |
+| `Timeout` | `TimeSpan` | Http client timeout.<br>*Default*: `TimeSpan.FromSeconds(100)` |
 
 The API client can be initialized as follows:
 
-```php
-$client = APIMATICCalculatorClientBuilder::init()
-    ->environment('production')
-    ->build();
+```csharp
+APIMATICCalculator.Standard.APIMATICCalculatorClient client = new APIMATICCalculator.Standard.APIMATICCalculatorClient.Builder()
+    .Environment(APIMATICCalculator.Standard.Environment.Production)
+    .Build();
 ```
 
 ## List of APIs
 
-* [Simple Calculator](https://www.github.com/apimatic/zahra-newtest/tree/2.0.2/doc/controllers/simple-calculator.md)
+* [Simple Calculator](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/controllers/simple-calculator.md)
 
 ## Classes Documentation
 
-* [ApiException](https://www.github.com/apimatic/zahra-newtest/tree/2.0.2/doc/api-exception.md)
-* [HttpRequest](https://www.github.com/apimatic/zahra-newtest/tree/2.0.2/doc/http-request.md)
-* [HttpResponse](https://www.github.com/apimatic/zahra-newtest/tree/2.0.2/doc/http-response.md)
+* [Utility Classes](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/utility-classes.md)
+* [HttpRequest](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/http-request.md)
+* [HttpResponse](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/http-response.md)
+* [HttpStringResponse](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/http-string-response.md)
+* [HttpContext](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/http-context.md)
+* [HttpClientConfiguration](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/http-client-configuration.md)
+* [HttpClientConfiguration Builder](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/http-client-configuration-builder.md)
+* [IAuthManager](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/i-auth-manager.md)
+* [ApiException](https://www.github.com/ZahraN444/createthisnewrepo/tree/1.2.3/doc/api-exception.md)
 
