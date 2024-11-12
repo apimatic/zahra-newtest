@@ -1,10 +1,10 @@
 {
   "AuthenticateEndpointsWith": [],
-  "Name": "Cypress Testtt API",
-  "BaseUri": "http://example.com",
+  "Name": "Cypress Test API",
+ 
   "ServerConfiguration": {
     "UseParent": false,
-    "DefaultEnvironment": "production",
+    "DefaultEnvironment": "",
     "DefaultServer": "default",
     "Environments": [
       {
