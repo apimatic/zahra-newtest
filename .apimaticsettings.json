@@ -1,0 +1,6 @@
+{
+    "OpenAPIDefinitionPaths": [
+        "spec"
+    ],
+    "IgnoreValidationErrors": false
+}
